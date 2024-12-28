@@ -1,4 +1,7 @@
+import com.codeborne.pdftest.PDF;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.xlstest.XLS;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -26,8 +29,25 @@ public class ArchiveFileCheck {
 
             ZipEntry zipEntry ;
             while ((zipEntry = zis.getNextEntry()) != null){
-                System.out.println(zipEntry.getName());
+
+
+                if(zipEntry.getName().endsWith(".pdf")){
+                    PDF pdf = new PDF(zis);
+                    Assertions.assertEquals("Проверочная строка для pdf файла. \r\n", pdf.text);
+                }
+
+                if(zipEntry.getName().endsWith(".xlsx")){
+                    XLS xls = new XLS(zis);
+                    //xls.excel.getSheetAt(0).getRow(1).getCell(1);
+
+
+
+                }
+
+
+
             }
+            
 
         }
 

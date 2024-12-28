@@ -11,8 +11,10 @@ repositories {
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:6.19.1",
-            "org.junit.jupiter:junit-jupiter:5.9.3"
+            'com.codeborne:selenide:6.19.1',
+            "org.junit.jupiter:junit-jupiter:5.9.3",
+            'com.codeborne:pdf-test:1.8.1',
+            'com.codeborne:xls-test:1.7.0'
     )
 
     testRuntimeOnly(
