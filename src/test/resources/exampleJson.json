@@ -1,0 +1,11 @@
+{
+  "Name" : "bastard sword",
+  "ID" : 123456,
+  "W_Type" : "EPIC",
+  "chance_to_drop" : 0.016,
+  "characters_weapon" : {
+    "damage_min" : 15,
+    "damage_max" : 25,
+    "critical_chance" : 0.25
+  }
+}
