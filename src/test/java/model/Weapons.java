@@ -2,7 +2,7 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public  class Weapons {
+public class Weapons {
 
     @JsonProperty("Name")
     String name;
@@ -18,6 +18,10 @@ public  class Weapons {
 
     @JsonProperty("characters_weapon")
     CharactersWeapon charactersWeapon;
+
+    public Weapons() {
+
+    }
 
     public Weapons(String name, Integer id, String weaponsType, Double chanceToDrop, CharactersWeapon charactersWeapon) {
         this.name = name;
